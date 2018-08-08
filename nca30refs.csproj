@@ -14,6 +14,8 @@
     <!-- latest from https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/master/Latest_Packages.txt -->
     <CompatPackVersion>2.1.0-preview1-26807-04</CompatPackVersion>
     <SystemCompositionVersion>1.3.0-preview1-26807-04</SystemCompositionVersion>
+    <!-- latest from https://github.com/dotnet/versions/blob/master/build-info/dotnet/wcf/master/Latest_Packages.txt -->
+    <WCFPackageVersion>4.6.0-preview1-26808-02</WCFPackageVersion>
   </PropertyGroup>
   
   <ItemGroup>
@@ -22,6 +24,12 @@
     <PackageReference Include="System.Composition" Version="$(SystemCompositionVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="3.0.0-alpha1-10223" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.8.0" />
+
+    <PackageReference Include="System.ServiceModel.Duplex" Version="$(WCFPackageVersion)" />
+    <PackageReference Include="System.ServiceModel.Http" Version="$(WCFPackageVersion)" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="$(WCFPackageVersion)" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="$(WCFPackageVersion)" />
+    <PackageReference Include="System.ServiceModel.Security" Version="$(WCFPackageVersion)" />
   </ItemGroup>
   
   <!-- CoreFx is still including a shim for WindowsBase but we need WPF's copy to win
